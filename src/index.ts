@@ -4,13 +4,9 @@
         return toUpper ? input.toUpperCase() : input.toLowerCase();
     }
 
-    formatString("Hello");
+    formatString("Moon");
     formatString("Hello", true);
     formatString("Hello", false);
-
-    // console.log(formatString("Mitu"));        
-    // console.log(formatString("Hello", true));  
-    // console.log(formatString("Hello", false)); 
 
     function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
         return items.filter(item => item.rating >= 4);
@@ -34,42 +30,55 @@
 
     function concatenateArrays<T>(...arrays: T[][]): T[] {
         return arrays.reduce((stockArray, currentArray) => stockArray.concat(currentArray), []);
-      }
-      
-      concatenateArrays(["a", "b"], ["c"]);    
-      concatenateArrays([1, 2], [3, 4], [5]);     
+    }
 
-      class Vehicle {
+    concatenateArrays(["a", "b"], ["c"]);
+    concatenateArrays([1, 2], [3, 4], [5]);
+
+    class Vehicle {
         private make: string;
         private year: number;
-      
+
         constructor(make: string, year: number) {
-          this.make = make;
-          this.year = year;
+            this.make = make;
+            this.year = year;
         }
 
         getInfo(): string {
-          return `Make: ${this.make}, Year: ${this.year}`;
+            return `Make: ${this.make}, Year: ${this.year}`;
         }
-      }
-      
-      class Car extends Vehicle {
+    }
+
+    class Car extends Vehicle {
         private model: string;
-        
+
         constructor(make: string, year: number, model: string) {
-          super(make, year); 
-          this.model = model;
+            super(make, year);
+            this.model = model;
         }
-      
+
         getModel(): string {
-          return `Model: ${this.model}`;
+            return `Model: ${this.model}`;
         }
-      }
-      
-      const myCar = new Car("Toyota", 2020, "Corolla");
+    }
+
+    const myCar = new Car("Toyota", 2020, "Corolla");
     //   const myCar = new Car("honda", 2020, "SUV");
-      
-      myCar.getInfo();  
-      myCar.getModel();
-      
+
+    myCar.getInfo();
+    myCar.getModel();
+
+
+    function processValue(value: string | number): number {
+        if (typeof value === "string") {
+            return value.length;
+        } else {
+            return value * 2;
+        }
+    }
+
+    processValue("hello");
+    processValue(10);
+
+
 }

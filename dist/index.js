@@ -30,29 +30,36 @@
     concatenateArrays(["a", "b"], ["c"]);
     concatenateArrays([1, 2], [3, 4], [5]);
     class Vehicle {
-        // Constructor
         constructor(make, year) {
             this.make = make;
             this.year = year;
         }
-        // Method to get the basic info (make and year)
         getInfo() {
             return `Make: ${this.make}, Year: ${this.year}`;
         }
     }
     class Car extends Vehicle {
-        // Constructor for the Car class, using the parent constructor
         constructor(make, year, model) {
-            super(make, year); // Calling the parent class constructor
+            super(make, year);
             this.model = model;
         }
-        // Method to get the model of the car
         getModel() {
             return `Model: ${this.model}`;
         }
     }
-    // Example usage:
     const myCar = new Car("Toyota", 2020, "Corolla");
-    console.log(myCar.getInfo()); // Output: "Make: Toyota, Year: 2020"
-    console.log(myCar.getModel()); // Output: "Model: Corolla"
+    //   const myCar = new Car("honda", 2020, "SUV");
+    myCar.getInfo();
+    myCar.getModel();
+    function processValue(value) {
+        if (typeof value === "string") {
+            return value.length; // Return the length of the string
+        }
+        else {
+            return value * 2; // Return the number multiplied by 2
+        }
+    }
+    // Example usage:
+    console.log(processValue("hello")); // Output: 5
+    console.log(processValue(10)); // Output: 20
 }
