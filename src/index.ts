@@ -110,6 +110,22 @@
       
       getMostExpensiveProduct(products);  
       
-
+      enum Day {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+      }
+      
+      function getDayType(day: Day): string {
+        return day === Day.Saturday || day === Day.Sunday ? "Weekend" : "Weekday";
+      }
+      
+      getDayType(Day.Monday); 
+      (Day.Sunday); 
+      
 
 }
