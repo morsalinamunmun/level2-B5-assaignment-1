@@ -5,8 +5,8 @@
     }
 
     formatString("Moon");
+    formatString("Akhter", false);
     formatString("Hello", true);
-    formatString("Hello", false);
 
     function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
         return items.filter(item => item.rating >= 4);
@@ -79,6 +79,37 @@
 
     processValue("hello");
     processValue(10);
+
+
+    interface Product {
+        name: string;
+        price: number;
+      }
+      
+      function getMostExpensiveProduct(products: Product[]): Product | null {
+        if (products.length === 0) {
+          return null;
+        }
+      
+        let mostExpensive = products[0];
+      
+        for (const product of products) {
+          if (product.price > mostExpensive.price) {
+            mostExpensive = product;
+          }
+        }
+      
+        return mostExpensive;
+      }
+      
+      const products = [
+        { name: "Pen", price: 10 },
+        { name: "Notebook", price: 25 },
+        { name: "Bag", price: 50 }
+      ];
+      
+      getMostExpensiveProduct(products);  
+      
 
 
 }

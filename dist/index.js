@@ -3,12 +3,9 @@
     function formatString(input, toUpper = true) {
         return toUpper ? input.toUpperCase() : input.toLowerCase();
     }
-    formatString("Hello");
+    formatString("Moon");
+    formatString("Akhter", false);
     formatString("Hello", true);
-    formatString("Hello", false);
-    // console.log(formatString("Mitu"));        
-    // console.log(formatString("Hello", true));  
-    // console.log(formatString("Hello", false)); 
     function filterByRating(items) {
         return items.filter(item => item.rating >= 4);
     }
@@ -53,13 +50,32 @@
     myCar.getModel();
     function processValue(value) {
         if (typeof value === "string") {
-            return value.length; // Return the length of the string
+            return value.length;
         }
         else {
-            return value * 2; // Return the number multiplied by 2
+            return value * 2;
         }
     }
-    // Example usage:
-    console.log(processValue("hello")); // Output: 5
-    console.log(processValue(10)); // Output: 20
+    processValue("hello");
+    processValue(10);
+    function getMostExpensiveProduct(products) {
+        if (products.length === 0) {
+            return null;
+        }
+        let mostExpensive = products[0];
+        for (const product of products) {
+            if (product.price > mostExpensive.price) {
+                mostExpensive = product;
+            }
+        }
+        return mostExpensive;
+    }
+    // ✅ Example usage:
+    const products = [
+        { name: "Pen", price: 10 },
+        { name: "Notebook", price: 25 },
+        { name: "Bag", price: 50 }
+    ];
+    console.log(getMostExpensiveProduct(products));
+    // Output: { name: "Bag", price: 50 }
 }
