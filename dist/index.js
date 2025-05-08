@@ -116,5 +116,4 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     }
     squareAsync(4).then(console.log);
     squareAsync(-3).catch(console.error);
-    console.log(Day.Monday);
 }

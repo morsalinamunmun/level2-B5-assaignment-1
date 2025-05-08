@@ -11,6 +11,11 @@
 - Type declaration merging is not supported.
 - Type a more complex type of manipulation, intersection, union is used in this case.
 
+## 5. What is type inference in TypeScript? Why is it helpful?
+Type information provides assistance in typescript because it reduces and shortens boilerplate code. Although in many cases the typescript cannot understand it, we have to specify the type ourselves.
+helpful:
+Write TypeScript code is clean & easier understand. We don't have type manually. This is faster development.
+
 ## 6. Ans: TypeScript help in improving code quality and project maintainability
 Using TypeScript provides developers with accurate and clean code, and using TypeScript in projects makes the project successful in the long run and easy to maintain.
 
@@ -73,8 +78,6 @@ enum Day {
       }
       console.log(Position.Rahim) //CEO
 ```
-## 5. What is type inference in TypeScript? Why is it helpful?
-Type information provides assistance in typescript because it reduces and shortens boilerplate code. Although in many cases the typescript cannot understand it, we have to specify the type ourselves.
 
 ## 3. Explain the difference between any, unknown, and never types in TypeScript.
 -**Any**
