@@ -25,9 +25,34 @@
     filterByRating(myBooks);
     filterByRating(books);
     function concatenateArrays(...arrays) {
-        return arrays.reduce((acc, curr) => acc.concat(curr), []);
+        return arrays.reduce((stockArray, currentArray) => stockArray.concat(currentArray), []);
     }
-    // Examples:
-    console.log(concatenateArrays(["a", "b"], ["c"])); // ["a", "b", "c"]
-    console.log(concatenateArrays([1, 2], [3, 4], [5])); // [1, 2, 3, 4, 5]
+    concatenateArrays(["a", "b"], ["c"]);
+    concatenateArrays([1, 2], [3, 4], [5]);
+    class Vehicle {
+        // Constructor
+        constructor(make, year) {
+            this.make = make;
+            this.year = year;
+        }
+        // Method to get the basic info (make and year)
+        getInfo() {
+            return `Make: ${this.make}, Year: ${this.year}`;
+        }
+    }
+    class Car extends Vehicle {
+        // Constructor for the Car class, using the parent constructor
+        constructor(make, year, model) {
+            super(make, year); // Calling the parent class constructor
+            this.model = model;
+        }
+        // Method to get the model of the car
+        getModel() {
+            return `Model: ${this.model}`;
+        }
+    }
+    // Example usage:
+    const myCar = new Car("Toyota", 2020, "Corolla");
+    console.log(myCar.getInfo()); // Output: "Make: Toyota, Year: 2020"
+    console.log(myCar.getModel()); // Output: "Model: Corolla"
 }
