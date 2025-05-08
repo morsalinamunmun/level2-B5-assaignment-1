@@ -39,5 +39,37 @@ const admin: AdminUser = {
   name: "John",
   role: "superadmin"
 };
+```
 
+## 2. What is the use of the keyof keyword in TypeScript? Provide an example.
+keyof is a TypeScript keyword that creates a union type of all the keys of a given object type. It is used to access object properties in a type-safe manner.
+```ts
+type User = { name: string; age: number };
+type UserKeys = keyof User;  
 
+function getUserInfo<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const user = { name: "Alice", age: 25 };
+getUserInfo(user, "name"); 
+```
+## 4. What is the use of enums in TypeScript? Provide an example of a numeric and string enum.
+Enums are a feature in TypeScript that define a group of named constants. They increase code readability and maintainability by providing meaningful names for numeric or string values.
+```ts
+enum Day {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+      }
+      console.log(Day.Monday) //0
+      enum Position{
+        Rahim: "CEO",
+        Karim: "Developer"
+      }
+      console.log(Position.Rahim) //CEO
+      ```
