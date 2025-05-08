@@ -72,4 +72,33 @@ enum Day {
         Karim: "Developer"
       }
       console.log(Position.Rahim) //CEO
-      ```
+```
+## 5. 
+Type information provides assistance in typescript because it reduces and shortens boilerplate code. Although in many cases the typescript cannot understand it, we have to specify the type ourselves.
+
+## 3. 
+-**Any**
+A variable with type any can hold any kind of value, and can do anything with it without compiler
+```ts
+let value: any = 0;
+value = "hello"; 
+```
+-**Unknown**
+Represents a value whose type is not known at compile time.
+Unlike any, TypeScript forces to check its type before using it.
+It’s safer and useful when dealing with external or uncertain data.
+```ts
+let value: unknown = "hello";
+
+if (typeof value === "string") {
+  console.log(value); 
+}
+```
+-**Never**
+Represents a value that never occurs.
+Used for functions that never return throw an error
+```ts
+function neverFunc(message: string): never {
+  throw new Error(message);
+}
+```
