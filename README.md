@@ -73,10 +73,10 @@ enum Day {
       }
       console.log(Position.Rahim) //CEO
 ```
-## 5. 
+## 5. What is type inference in TypeScript? Why is it helpful?
 Type information provides assistance in typescript because it reduces and shortens boilerplate code. Although in many cases the typescript cannot understand it, we have to specify the type ourselves.
 
-## 3. 
+## 3. Explain the difference between any, unknown, and never types in TypeScript.
 -**Any**
 A variable with type any can hold any kind of value, and can do anything with it without compiler
 ```ts
