@@ -32,4 +32,12 @@
     filterByRating(books);
 
 
+    function concatenateArrays<T>(...arrays: T[][]): T[] {
+        return arrays.reduce((stockArray, currentArray) => stockArray.concat(currentArray), []);
+      }
+      
+      concatenateArrays(["a", "b"], ["c"]);    
+      concatenateArrays([1, 2], [3, 4], [5]);     
+
+
 }
